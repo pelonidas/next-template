@@ -1,10 +1,9 @@
-import { title } from 'process';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import BaseTemplate, { IBaseInterface } from './BaseTemplate';
 import { mockBaseTemplateProps } from './BaseTemplate.mocks';
 
 export default {
-  title: 'templates/BaseTemplate',
+  title: 'templates/CatCard',
   component: BaseTemplate,
   argTypes: {},
 } as ComponentMeta<typeof BaseTemplate>;
