@@ -12,13 +12,3 @@ services:
       - ./components:/app/components
     ports:
       - "3000:3000"
-  storybook:
-    build:
-      dockerfile: Dockerfile-storybook
-    container_name: storybook
-    ports:
-      - "6006:6006"
-    volumes:
-      - ./public:/app/public
-      - ./styles:/app/styles
-      - ./components:/app/components
