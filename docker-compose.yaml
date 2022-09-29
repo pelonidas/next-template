@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  nextjs:
+    build:
+      dockerfile: Dockerfile
+    container_name: nextjs
+    volumes:
+      - ./pages:/app/pages
+      - ./public:/app/public
+      - ./styles:/app/styles
+      - ./components:/app/components
+    ports:
+      - "3000:3000"
+  storybook:
+    build:
+      dockerfile: Dockerfile-storybook
+    container_name: storybook
+    ports:
+      - "6006:6006"
+    volumes:
+      - ./public:/app/public
+      - ./styles:/app/styles
+      - ./components:/app/components
